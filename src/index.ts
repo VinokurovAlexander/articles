@@ -1,1 +1,1 @@
-console.log('lol')
+document.body.innerHTML = `<div>hello world</div>`
