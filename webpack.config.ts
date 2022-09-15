@@ -8,9 +8,10 @@ export default (env: BuildEnv) => {
     const PORT = env.port || 3000;
 
     const paths: BuildPaths ={
-        entry: path.resolve(__dirname, 'src', 'index.ts'),
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
         html: path.resolve(__dirname, 'public', 'index.html'),
         build: path.resolve(__dirname, 'build'),
+        src: path.resolve(__dirname, 'src'),
     }
 
     return buildWebpackConfig({ mode: mode, paths, isDev, port: PORT });
