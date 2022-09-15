@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { Route, Routes, NavLink } from "react-router-dom";
-import { AboutPage } from './pages/AboutPage';
-import { MainPage } from "./pages/MainPage";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames";
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib";
+import { MainPage } from "pages/MainPage";
+import { AboutPage } from "pages/AboutPage";
+
 
 export const App = () => {
     const { theme, toggleTheme } = useTheme();
