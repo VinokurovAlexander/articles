@@ -1,9 +1,8 @@
 import { Suspense } from 'react';
-import { Route, Routes, NavLink } from "react-router-dom";
-import { useTheme } from "app/providers/ThemeProvider";
+import { NavLink } from "react-router-dom";
+import { useTheme } from "app/providers/theme";
 import { classNames } from "shared/lib";
-import { MainPage } from "pages/MainPage";
-import { AboutPage } from "pages/AboutPage";
+import { AppRouter } from "app/providers/router";
 
 
 export const App = () => {
@@ -19,10 +18,7 @@ export const App = () => {
             </NavLink>
             <button onClick={toggleTheme}>Theme toggle</button>
             <Suspense fallback={<span>loading...</span>}>
-                <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                </Routes>
+                <AppRouter />
             </Suspense>
         </div>
     )
