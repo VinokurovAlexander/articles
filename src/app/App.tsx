@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
-import { NavLink } from "react-router-dom";
 import { useTheme } from "app/providers/theme";
 import { classNames } from "shared/lib";
 import { AppRouter } from "app/providers/router";
+import { Navbar } from "widgets/Navbar";
 
 
 export const App = () => {
@@ -10,12 +10,7 @@ export const App = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <NavLink to="/">
-                Main
-            </NavLink>
-            <NavLink to="/about">
-                About
-            </NavLink>
+            <Navbar />
             <button onClick={toggleTheme}>Theme toggle</button>
             <Suspense fallback={<span>loading...</span>}>
                 <AppRouter />
