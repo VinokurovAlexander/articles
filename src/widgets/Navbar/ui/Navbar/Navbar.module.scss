@@ -1,6 +1,10 @@
 .navbar {
   display: flex;
-  justify-content: flex-end;
-  gap: 15px;
   padding-inline: 15px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
 }
