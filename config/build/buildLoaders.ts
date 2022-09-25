@@ -28,7 +28,12 @@ const buildLoaders = (options: BuildOptions ): RuleSetRule[] => {
         ],
     }
 
-    return [typescriptLoader, cssLoader];
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
+    return [typescriptLoader, cssLoader, svgLoader];
 }
 
 export default buildLoaders;
