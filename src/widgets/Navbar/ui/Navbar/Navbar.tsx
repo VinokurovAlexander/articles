@@ -1,6 +1,6 @@
-import { NavLink } from "../NavLink";
-import { AppRoutePath } from "shared/config/routerConfig";
-import { ThemeSwitcher } from "../ThemeSwitcher";
+import { NavLink } from '../NavLink';
+import { AppRoutePath } from 'shared/config/routerConfig';
+import { ThemeSwitcher } from '../ThemeSwitcher';
 import classes from './Navbar.module.scss';
 
 const Navbar = () => (
@@ -12,6 +12,6 @@ const Navbar = () => (
             )}
         </div>
     </div>
-)
+);
 
 export default Navbar;

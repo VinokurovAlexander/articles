@@ -1,9 +1,8 @@
-import { Suspense } from 'react';
-import { useTheme } from "shared/lib/theme";
-import { classNames } from "shared/lib/classnames";
-import { AppRouter } from "app/providers/router";
-import { Navbar } from "widgets/Navbar";
-import { Sidebar } from "widgets/Sidebar";
+import { useTheme } from 'shared/lib/theme';
+import { classNames } from 'shared/lib/classnames';
+import { AppRouter } from 'app/providers/router';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
 import classes from './App.module.scss';
 
 const App = () => {
@@ -14,12 +13,10 @@ const App = () => {
             <Navbar />
             <div className={classNames(classes.content)}>
                 <Sidebar />
-                <Suspense fallback={<span>loading...</span>}>
-                    <AppRouter />
-                </Suspense>
+                <AppRouter />
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default App;

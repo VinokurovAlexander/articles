@@ -6,4 +6,4 @@ export const classNames = (className: string, mods: Mods = {}, additional: strin
         ...additional,
         Object.keys(mods).filter(key => mods[key])
     ]
-        .join(' ')
+        .join(' ');

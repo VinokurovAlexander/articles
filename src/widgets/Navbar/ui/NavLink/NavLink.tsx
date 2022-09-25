@@ -1,11 +1,9 @@
 import { FC } from 'react';
-import { NavLink as BaseNavLink, NavLinkProps} from "react-router-dom";
-import { classNames } from "shared/lib/classnames";
+import { NavLink as BaseNavLink, NavLinkProps } from 'react-router-dom';
+import { classNames } from 'shared/lib/classnames';
 import classes from './NavLink.module.scss';
 
-interface LinkProps extends NavLinkProps {}
-
-const NavLink: FC<LinkProps> = (props) => {
+const NavLink: FC<NavLinkProps> = (props) => {
     const { to, children } = props;
 
     return (
@@ -15,7 +13,7 @@ const NavLink: FC<LinkProps> = (props) => {
         >
             {children}
         </BaseNavLink>
-    )
+    );
 };
 
 export default NavLink;
